@@ -22,7 +22,7 @@ export class Tab1Page {
   async removeItem (item, index) {
 
       const toast = await this.toastController.create({
-      message: item.name + " was marked as purchased",
+      message: item.name.charAt(item.name.length-1)==='s' ? item.name + " were marked as purchased" : item.name + " was marked as purchased",
       duration: 3000,
       icon: "checkmark-circle-outline",
       position: "bottom"
